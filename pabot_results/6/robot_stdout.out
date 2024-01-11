@@ -1,0 +1,34 @@
+==============================================================================
+pythonProject                                                                 
+==============================================================================
+pythonProject.Tests                                                           
+==============================================================================
+pythonProject.Tests.testDemoPO :: To validate Login                           
+==============================================================================
+validate successful login                                               
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\testDemoPO.robot:9
+    T:  validate successful login    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\testDemoPO.robot:10
+      Fill the username and password    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\PO\testDemoPoPage.robot:30
+      Input Text    ${usernameLoc}    ${usernameVal}
+      |  ${usernameLoc} = css:[name="user-name"] (str)
+      |  ${usernameVal} = standard_user (str)
+______________________________________________________________________________
+| FAIL |
+Element with locator 'css:[name="user-name"]' not found.
+------------------------------------------------------------------------------
+pythonProject.Tests.testDemoPO :: To validate Login                   | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+pythonProject.Tests                                                   | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+pythonProject                                                         | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\pabot_results\6\output.xml

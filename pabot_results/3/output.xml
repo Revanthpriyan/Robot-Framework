@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240109 14:02:46.794" rpa="false" schemaversion="4">
+<suite id="s1" name="pythonProject" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject">
+<suite id="s1-s1" name="Tests" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests">
+<suite id="s1-s1-s1" name="dropDown" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\dropDown.robot">
+<test id="s1-s1-s1-t1" name="Select a item from options" line="9">
+<kw name="open the browser and with swaglabs url" library="resource" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>C:/Users/Lenovo/Downloads/chromedriver_win32</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240109 14:02:47.217" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240109 14:02:47.216" endtime="20240109 14:02:48.819"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240109 14:02:48.819" level="INFO">Opening url 'https://www.saucedemo.com/v1/'</msg>
+<status status="PASS" starttime="20240109 14:02:48.819" endtime="20240109 14:02:50.603"/>
+</kw>
+<status status="PASS" starttime="20240109 14:02:47.214" endtime="20240109 14:02:50.603"/>
+</kw>
+<kw name="Fill the username and password">
+<arg>${usernameVal}</arg>
+<arg>${passwordVal}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${username}</arg>
+<arg>${usernameVal}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 14:02:50.609" level="INFO">Typing text 'standard_user' into text field 'css:[name="user-name"]'.</msg>
+<status status="PASS" starttime="20240109 14:02:50.604" endtime="20240109 14:02:51.015"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${password}</arg>
+<arg>${passwordVal}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 14:02:51.018" level="INFO">Typing password into text field 'css:[name="password"]'.</msg>
+<msg timestamp="20240109 14:02:51.119" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240109 14:02:51.229" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240109 14:02:51.015" endtime="20240109 14:02:51.229"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240109 14:02:51.230" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20240109 14:02:51.230" endtime="20240109 14:02:56.342"/>
+</kw>
+<status status="PASS" starttime="20240109 14:02:50.604" endtime="20240109 14:02:56.342"/>
+</kw>
+<kw name="verify the options to search items">
+<arg>lohi</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${list}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 14:02:56.342" endtime="20240109 14:02:56.381"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${list}</arg>
+<arg>${value}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20240109 14:02:56.382" level="INFO">Selecting options from selection list 'css:[class="product_sort_container"]' by value lohi.</msg>
+<status status="PASS" starttime="20240109 14:02:56.381" endtime="20240109 14:02:56.493"/>
+</kw>
+<status status="PASS" starttime="20240109 14:02:56.342" endtime="20240109 14:02:56.493"/>
+</kw>
+<status status="PASS" starttime="20240109 14:02:47.213" endtime="20240109 14:02:56.493"/>
+</test>
+<doc>To select a item from dropdown</doc>
+<status status="PASS" starttime="20240109 14:02:46.846" endtime="20240109 14:02:56.494"/>
+</suite>
+<status status="PASS" starttime="20240109 14:02:46.843" endtime="20240109 14:02:56.495"/>
+</suite>
+<status status="PASS" starttime="20240109 14:02:46.814" endtime="20240109 14:02:56.496"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="pythonProject">pythonProject</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">pythonProject.Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="dropDown">pythonProject.Tests.dropDown</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

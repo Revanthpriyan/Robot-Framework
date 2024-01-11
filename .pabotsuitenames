@@ -1,0 +1,12 @@
+datasources:67e5126d0b3aae53a96b61df7363781e86c6bfaf
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:3e8d59af4763499d28b39fcf96cbde37960b23a2
+--suite pythonProject.Tests.Alert
+--suite pythonProject.Tests.Parameterization
+--suite pythonProject.Tests.dataDriver
+--suite pythonProject.Tests.dropDown
+--suite pythonProject.Tests.testDemo
+--suite pythonProject.Tests.testDemo1
+--suite pythonProject.Tests.testDemoPO
+--suite pythonProject.Tests.windowHandle

@@ -1,0 +1,10 @@
+[ ERROR ] Error in file 'C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\testDemoPO.robot' on line 3: Importing library 'SelemiumLibrary' failed: ModuleNotFoundError: No module named 'SelemiumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\Scripts\robot.exe
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python312
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages

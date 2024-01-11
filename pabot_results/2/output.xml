@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240109 14:02:46.762" rpa="false" schemaversion="4">
+<suite id="s1" name="pythonProject" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject">
+<suite id="s1-s1" name="Tests" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests">
+<suite id="s1-s1-s1" name="dataDriver" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\dataDriver.robot">
+<test id="s1-s1-s1-t1" name="valid" line="15">
+<kw name="validate login">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<kw name="open the browser and with swaglabs url">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>C:/Users/Lenovo/Downloads/chromedriver_win32</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240109 14:02:47.294" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240109 14:02:47.293" endtime="20240109 14:02:50.331"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240109 14:02:50.333" level="INFO">Opening url 'https://www.saucedemo.com/v1/'</msg>
+<status status="PASS" starttime="20240109 14:02:50.331" endtime="20240109 14:02:53.504"/>
+</kw>
+<status status="PASS" starttime="20240109 14:02:47.293" endtime="20240109 14:02:53.504"/>
+</kw>
+<kw name="Fill the username and password">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${usernameLocator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 14:02:53.507" level="INFO">Typing text 'standard_user' into text field 'css:[name="user-name"]'.</msg>
+<status status="PASS" starttime="20240109 14:02:53.505" endtime="20240109 14:02:53.695"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${passwordLocator}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 14:02:53.696" level="INFO">Typing password into text field 'css:[name="password"]'.</msg>
+<msg timestamp="20240109 14:02:53.756" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240109 14:02:53.891" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240109 14:02:53.695" endtime="20240109 14:02:53.891"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240109 14:02:53.893" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20240109 14:02:53.891" endtime="20240109 14:03:01.704"/>
+</kw>
+<status status="PASS" starttime="20240109 14:02:53.504" endtime="20240109 14:03:01.704"/>
+</kw>
+<kw name="wait for login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${container}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240109 14:03:01.705" endtime="20240109 14:03:01.734"/>
+</kw>
+<status status="PASS" starttime="20240109 14:03:01.704" endtime="20240109 14:03:01.734"/>
+</kw>
+<kw name="verify login">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${result}</var>
+<arg>(//button[@class="btn_primary btn_inventory"])[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240109 14:03:01.761" level="INFO">${result} = ADD TO CART</msg>
+<status status="PASS" starttime="20240109 14:03:01.734" endtime="20240109 14:03:01.761"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${result}</arg>
+<arg>ADD TO CART</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20240109 14:03:01.761" endtime="20240109 14:03:01.761"/>
+</kw>
+<status status="PASS" starttime="20240109 14:03:01.734" endtime="20240109 14:03:01.762"/>
+</kw>
+<status status="PASS" starttime="20240109 14:02:47.292" endtime="20240109 14:03:01.762"/>
+</kw>
+<status status="PASS" starttime="20240109 14:02:47.289" endtime="20240109 14:03:01.762"/>
+</test>
+<test id="s1-s1-s1-t2" name="invalid username" line="15">
+<kw name="validate login">
+<arg>rev</arg>
+<arg>standard_user</arg>
+<kw name="open the browser and with swaglabs url">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>C:/Users/Lenovo/Downloads/chromedriver_win32</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240109 14:03:01.765" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240109 14:03:01.765" endtime="20240109 14:03:03.346"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240109 14:03:03.348" level="INFO">Opening url 'https://www.saucedemo.com/v1/'</msg>
+<status status="PASS" starttime="20240109 14:03:03.346" endtime="20240109 14:03:05.624"/>
+</kw>
+<status status="PASS" starttime="20240109 14:03:01.764" endtime="20240109 14:03:05.624"/>
+</kw>
+<kw name="Fill the username and password">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${usernameLocator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 14:03:05.627" level="INFO">Typing text 'rev' into text field 'css:[name="user-name"]'.</msg>
+<status status="PASS" starttime="20240109 14:03:05.626" endtime="20240109 14:03:06.537"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${passwordLocator}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 14:03:06.538" level="INFO">Typing password into text field 'css:[name="password"]'.</msg>
+<msg timestamp="20240109 14:03:06.581" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240109 14:03:06.634" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240109 14:03:06.537" endtime="20240109 14:03:06.635"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240109 14:03:06.635" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20240109 14:03:06.635" endtime="20240109 14:03:06.707"/>
+</kw>
+<status status="PASS" starttime="20240109 14:03:05.624" endtime="20240109 14:03:06.707"/>
+</kw>
+<kw name="wait for login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${container}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240109 14:03:12.037" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240109 14:03:12.037" level="FAIL">Element 'id:shopping_cart_container' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20240109 14:03:06.708" endtime="20240109 14:03:12.040"/>
+</kw>
+<status status="FAIL" starttime="20240109 14:03:06.707" endtime="20240109 14:03:12.041"/>
+</kw>
+<kw name="verify login">
+<status status="NOT RUN" starttime="20240109 14:03:12.041" endtime="20240109 14:03:12.041"/>
+</kw>
+<status status="FAIL" starttime="20240109 14:03:01.764" endtime="20240109 14:03:12.041"/>
+</kw>
+<status status="FAIL" starttime="20240109 14:03:01.763" endtime="20240109 14:03:12.042">Element 'id:shopping_cart_container' not visible after 5 seconds.</status>
+</test>
+<test id="s1-s1-s1-t3" name="invalid password" line="15">
+<kw name="validate login">
+<arg>standard_user</arg>
+<arg>rev</arg>
+<kw name="open the browser and with swaglabs url">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>C:/Users/Lenovo/Downloads/chromedriver_win32</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240109 14:03:12.046" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240109 14:03:12.046" endtime="20240109 14:03:13.532"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240109 14:03:13.532" level="INFO">Opening url 'https://www.saucedemo.com/v1/'</msg>
+<status status="PASS" starttime="20240109 14:03:13.532" endtime="20240109 14:03:21.736"/>
+</kw>
+<status status="PASS" starttime="20240109 14:03:12.044" endtime="20240109 14:03:21.736"/>
+</kw>
+<kw name="Fill the username and password">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${usernameLocator}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 14:03:21.737" level="INFO">Typing text 'standard_user' into text field 'css:[name="user-name"]'.</msg>
+<status status="PASS" starttime="20240109 14:03:21.737" endtime="20240109 14:03:21.865"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${passwordLocator}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 14:03:21.866" level="INFO">Typing password into text field 'css:[name="password"]'.</msg>
+<msg timestamp="20240109 14:03:21.903" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20240109 14:03:21.947" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240109 14:03:21.865" endtime="20240109 14:03:21.947"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20240109 14:03:21.948" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20240109 14:03:21.947" endtime="20240109 14:03:22.010"/>
+</kw>
+<status status="PASS" starttime="20240109 14:03:21.736" endtime="20240109 14:03:22.010"/>
+</kw>
+<kw name="wait for login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${container}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240109 14:03:24.357" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.200)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DF5E2142+3514994]
+	(No symbol) [0x00007FF6DF200CE2]
+	(No symbol) [0x00007FF6DF0A76AA]
+	(No symbol) [0x00007FF6DF080AFD]
+	(No symbol) [0x00007FF6DF11CB1B]
+	(No symbol) [0x00007FF6DF13218F]
+	(No symbol) [0x00007FF6DF115D93]
+	(No symbol) [0x00007FF6DF0E4BDC]
+	(No symbol) [0x00007FF6DF0E5C64]
+	GetHandleVerifier [0x00007FF6DF60E16B+3695259]
+	GetHandleVerifier [0x00007FF6DF666737+4057191]
+	GetHandleVerifier [0x00007FF6DF65E4E3+4023827]
+	GetHandleVerifier [0x00007FF6DF3304F9+689705]
+	(No symbol) [0x00007FF6DF20C048]
+	(No symbol) [0x00007FF6DF208044]
+	(No symbol) [0x00007FF6DF2081C9]
+	(No symbol) [0x00007FF6DF1F88C4]
+	BaseThreadInitThunk [0x00007FFBC4F1257D+29]
+	RtlUserThreadStart [0x00007FFBC5BEAA58+40]
+</msg>
+<msg timestamp="20240109 14:03:24.358" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.200)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DF5E2142+3514994]
+	(No symbol) [0x00007FF6DF200CE2]
+	(No symbol) [0x00007FF6DF0A76AA]
+	(No symbol) [0x00007FF6DF080AFD]
+	(No symbol) [0x00007FF6DF11CB1B]
+	(No symbol) [0x00007FF6DF13218F]
+	(No symbol) [0x00007FF6DF115D93]
+	(No symbol) [0x00007FF6DF0E4BDC]
+	(No symbol) [0x00007FF6DF0E5C64]
+	GetHandleVerifier [0x00007FF6DF60E16B+3695259]
+	GetHandleVerifier [0x00007FF6DF666737+4057191]
+	GetHandleVerifier [0x00007FF6DF65E4E3+4023827]
+	GetHandleVerifier [0x00007FF6DF3304F9+689705]
+	(No symbol) [0x00007FF6DF20C048]
+	(No symbol) [0x00007FF6DF208044]
+	(No symbol) [0x00007FF6DF2081C9]
+	(No symbol) [0x00007FF6DF1F88C4]
+	BaseThreadInitThunk [0x00007FFBC4F1257D+29]
+	RtlUserThreadStart [0x00007FFBC5BEAA58+40]
+</msg>
+<status status="FAIL" starttime="20240109 14:03:22.011" endtime="20240109 14:03:24.392"/>
+</kw>
+<status status="FAIL" starttime="20240109 14:03:22.010" endtime="20240109 14:03:24.392"/>
+</kw>
+<kw name="verify login">
+<status status="NOT RUN" starttime="20240109 14:03:24.392" endtime="20240109 14:03:24.393"/>
+</kw>
+<status status="FAIL" starttime="20240109 14:03:12.044" endtime="20240109 14:03:24.393"/>
+</kw>
+<status status="FAIL" starttime="20240109 14:03:12.043" endtime="20240109 14:03:24.393">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.200)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DF5E2142+3514994]
+	(No symbol) [0x00007FF6DF200CE2]
+	(No symbol) [0x00007FF6DF0A76AA]
+	(No symbol) [0x00007FF6DF080AFD]
+	(No symbol) [0x00007FF6DF11CB1B]
+	(No symbol) [0x00007FF6DF13218F]
+	(No symbol) [0x00007FF6DF115D93]
+	(No symbol) [0x00007FF6DF0E4BDC]
+	(No symbol) [0x00007FF6DF0E5C64]
+	GetHandleVerifier [0x00007FF6DF60E16B+3695259]
+	GetHandleVerifier [0x00007FF6DF666737+4057191]
+	GetHandleVerifier [0x00007FF6DF65E4E3+4023827]
+	GetHandleVerifier [0x00007FF6DF3304F9+689705]
+	(No symbol) [0x00007FF6DF20C048]
+	(No symbol) [0x00007FF6DF208044]
+	(No symbol) [0x00007FF6DF2081C9]
+	(No symbol) [0x00007FF6DF1F88C4]
+	BaseThreadInitThunk [0x00007FFBC4F1257D+29]
+	RtlUserThreadStart [0x00007FFBC5BEAA58+40]
+</status>
+</test>
+<doc>To validate login</doc>
+<status status="FAIL" starttime="20240109 14:02:46.815" endtime="20240109 14:03:24.395"/>
+</suite>
+<status status="FAIL" starttime="20240109 14:02:46.810" endtime="20240109 14:03:24.397"/>
+</suite>
+<status status="FAIL" starttime="20240109 14:02:46.778" endtime="20240109 14:03:24.398"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="2" skip="0" id="s1" name="pythonProject">pythonProject</stat>
+<stat pass="1" fail="2" skip="0" id="s1-s1" name="Tests">pythonProject.Tests</stat>
+<stat pass="1" fail="2" skip="0" id="s1-s1-s1" name="dataDriver">pythonProject.Tests.dataDriver</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240109 14:03:24.357" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.200)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6DF5E2142+3514994]
+	(No symbol) [0x00007FF6DF200CE2]
+	(No symbol) [0x00007FF6DF0A76AA]
+	(No symbol) [0x00007FF6DF080AFD]
+	(No symbol) [0x00007FF6DF11CB1B]
+	(No symbol) [0x00007FF6DF13218F]
+	(No symbol) [0x00007FF6DF115D93]
+	(No symbol) [0x00007FF6DF0E4BDC]
+	(No symbol) [0x00007FF6DF0E5C64]
+	GetHandleVerifier [0x00007FF6DF60E16B+3695259]
+	GetHandleVerifier [0x00007FF6DF666737+4057191]
+	GetHandleVerifier [0x00007FF6DF65E4E3+4023827]
+	GetHandleVerifier [0x00007FF6DF3304F9+689705]
+	(No symbol) [0x00007FF6DF20C048]
+	(No symbol) [0x00007FF6DF208044]
+	(No symbol) [0x00007FF6DF2081C9]
+	(No symbol) [0x00007FF6DF1F88C4]
+	BaseThreadInitThunk [0x00007FFBC4F1257D+29]
+	RtlUserThreadStart [0x00007FFBC5BEAA58+40]
+</msg>
+</errors>
+</robot>

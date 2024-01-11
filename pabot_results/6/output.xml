@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240109 14:02:46.797" rpa="false" schemaversion="4">
+<suite id="s1" name="pythonProject" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject">
+<suite id="s1-s1" name="Tests" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests">
+<suite id="s1-s1-s1" name="testDemoPO" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\testDemoPO.robot">
+<test id="s1-s1-s1-t1" name="validate successful login" line="9">
+<kw name="open the browser and with swaglabs url" library="testDemoPoPage" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>C:/Users/Lenovo/Downloads/chromedriver_win32</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240109 14:02:47.221" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20240109 14:02:47.220" endtime="20240109 14:02:50.346"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240109 14:02:50.349" level="INFO">Opening url 'https://www.saucedemo.com/v1/'</msg>
+<status status="PASS" starttime="20240109 14:02:50.347" endtime="20240109 14:02:51.114"/>
+</kw>
+<status status="PASS" starttime="20240109 14:02:47.219" endtime="20240109 14:02:51.114"/>
+</kw>
+<kw name="Fill the username and password" library="testDemoPoPage">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${usernameLoc}</arg>
+<arg>${usernameVal}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240109 14:02:51.118" level="INFO">Typing text 'standard_user' into text field 'css:[name="user-name"]'.</msg>
+<msg timestamp="20240109 14:02:53.689" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240109 14:02:53.689" level="FAIL">Element with locator 'css:[name="user-name"]' not found.</msg>
+<status status="FAIL" starttime="20240109 14:02:51.117" endtime="20240109 14:02:53.696"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${passwordLoc}</arg>
+<arg>${passwordVal}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 14:02:53.698" endtime="20240109 14:02:53.698"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240109 14:02:53.699" endtime="20240109 14:02:53.699"/>
+</kw>
+<status status="FAIL" starttime="20240109 14:02:51.115" endtime="20240109 14:02:53.700"/>
+</kw>
+<kw name="wait for login" library="testDemoPoPage">
+<status status="NOT RUN" starttime="20240109 14:02:53.700" endtime="20240109 14:02:53.700"/>
+</kw>
+<kw name="verify login" library="testDemoPoPage">
+<status status="NOT RUN" starttime="20240109 14:02:53.701" endtime="20240109 14:02:53.701"/>
+</kw>
+<status status="FAIL" starttime="20240109 14:02:47.218" endtime="20240109 14:02:53.701">Element with locator 'css:[name="user-name"]' not found.</status>
+</test>
+<doc>To validate Login</doc>
+<status status="FAIL" starttime="20240109 14:02:46.849" endtime="20240109 14:02:53.702"/>
+</suite>
+<status status="FAIL" starttime="20240109 14:02:46.845" endtime="20240109 14:02:53.707"/>
+</suite>
+<status status="FAIL" starttime="20240109 14:02:46.816" endtime="20240109 14:02:53.710"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="pythonProject">pythonProject</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">pythonProject.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="testDemoPO">pythonProject.Tests.testDemoPO</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240109 14:02:46.855" level="ERROR">Error in file 'C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\testDemoPO.robot' on line 3: Importing library 'SelemiumLibrary' failed: ModuleNotFoundError: No module named 'SelemiumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\Scripts\robot.exe
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\python312.zip
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\DLLs
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\Lib
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python312
+  C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\Lib\site-packages</msg>
+</errors>
+</robot>

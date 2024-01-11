@@ -1,0 +1,57 @@
+==============================================================================
+pythonProject                                                                 
+==============================================================================
+pythonProject.Tests                                                           
+==============================================================================
+pythonProject.Tests.Parameterization :: To validate login                     
+==============================================================================
+valid                                                                 | PASS |
+------------------------------------------------------------------------------
+invalid username                                                        
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\parameterization.robot:15
+    T:  invalid username    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\parameterization.robot:15
+      validate login    rev    standard_user
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\parameterization.robot:24
+      wait for login    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\parameterization.robot:38
+      Wait Until Element Is Visible    ${container}
+      |  ${container} = id:shopping_cart_container (str)
+______________________________________________________________________________
+| FAIL |
+Element 'id:shopping_cart_container' not visible after 5 seconds.
+------------------------------------------------------------------------------
+invalid password                                                        
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\parameterization.robot:16
+    T:  invalid password    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\parameterization.robot:16
+      validate login    standard_user    rev
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\parameterization.robot:24
+      wait for login    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\parameterization.robot:38
+      Wait Until Element Is Visible    ${container}
+      |  ${container} = id:shopping_cart_container (str)
+______________________________________________________________________________
+| FAIL |
+Element 'id:shopping_cart_container' not visible after 5 seconds.
+------------------------------------------------------------------------------
+pythonProject.Tests.Parameterization :: To validate login             | FAIL |
+3 tests, 1 passed, 2 failed
+==============================================================================
+pythonProject.Tests                                                   | FAIL |
+3 tests, 1 passed, 2 failed
+==============================================================================
+pythonProject                                                         | FAIL |
+3 tests, 1 passed, 2 failed
+==============================================================================
+Output:  C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\pabot_results\1\output.xml
