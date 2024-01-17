@@ -1,208 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240110 16:54:12.242" rpa="false" schemaversion="4">
-<suite id="s1" name="pythonProject" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject">
-<suite id="s1-s1" name="Tests" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests">
-<suite id="s1-s1-s1" name="testDemoPO" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\testDemoPO.robot">
-<test id="s1-s1-s1-t1" name="Add a Item To the Cart" line="13">
-<kw name="open the browser and with swaglabs url" library="testDemoPoPage" type="SETUP">
+<robot generator="Robot 6.1.1 (Python 3.12.1 on win32)" generated="20240116 11:54:09.873" rpa="false" schemaversion="4">
+<suite id="s1" name="Alert" source="C:\Users\Lenovo\PycharmProjects\RobotFramework\pythonProject\tests\alert.robot">
+<test id="s1-t1" name="Open the browser and handle alert" line="12">
+<kw name="Open the browser with leafground url" library="alertPage">
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <arg>Chrome</arg>
 <arg>C:/Users/Lenovo/Downloads/chromedriver_win32</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20240110 16:54:12.451" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20240110 16:54:12.451" endtime="20240110 16:54:13.925"/>
+<msg timestamp="20240116 11:54:10.138" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20240116 11:54:10.762" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)); using driver found in the cache</msg>
+<status status="PASS" starttime="20240116 11:54:10.138" endtime="20240116 11:54:12.438"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
-<arg>https://www.saucedemo.com/v1/</arg>
+<arg>https://www.leafground.com/alert.xhtml;jsessionid=node0qjq6vbsjg45g1647tv77jh7hf53985.node0AC</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240110 16:54:13.925" level="INFO">Opening url 'https://www.saucedemo.com/v1/'</msg>
-<status status="PASS" starttime="20240110 16:54:13.925" endtime="20240110 16:54:15.525"/>
+<msg timestamp="20240116 11:54:12.439" level="INFO">Opening url 'https://www.leafground.com/alert.xhtml;jsessionid=node0qjq6vbsjg45g1647tv77jh7hf53985.node0AC'</msg>
+<msg timestamp="20240116 11:54:12.962" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240116 11:54:12.962" level="FAIL">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=120.0.6099.217)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7D8032142+3514994]
+	(No symbol) [0x00007FF7D7C50CE2]
+	(No symbol) [0x00007FF7D7AF76AA]
+	(No symbol) [0x00007FF7D7AEFB39]
+	(No symbol) [0x00007FF7D7AE25DD]
+	(No symbol) [0x00007FF7D7AE16FD]
+	(No symbol) [0x00007FF7D7AE0746]
+	(No symbol) [0x00007FF7D7AE06EB]
+	(No symbol) [0x00007FF7D7ADEE3D]
+	(No symbol) [0x00007FF7D7ADF603]
+	(No symbol) [0x00007FF7D7AFA0FD]
+	(No symbol) [0x00007FF7D7B82E01]
+	(No symbol) [0x00007FF7D7B65FEA]
+	(No symbol) [0x00007FF7D7B828F6]
+	(No symbol) [0x00007FF7D7B65D93]
+	(No symbol) [0x00007FF7D7B34BDC]
+	(No symbol) [0x00007FF7D7B35C64]
+	GetHandleVerifier [0x00007FF7D805E16B+3695259]
+	GetHandleVerifier [0x00007FF7D80B6737+4057191]
+	GetHandleVerifier [0x00007FF7D80AE4E3+4023827]
+	GetHandleVerifier [0x00007FF7D7D804F9+689705]
+	(No symbol) [0x00007FF7D7C5C048]
+	(No symbol) [0x00007FF7D7C58044]
+	(No symbol) [0x00007FF7D7C581C9]
+	(No symbol) [0x00007FF7D7C488C4]
+	BaseThreadInitThunk [0x00007FFF5586257D+29]
+	RtlUserThreadStart [0x00007FFF5768AA58+40]
+</msg>
+<status status="FAIL" starttime="20240116 11:54:12.439" endtime="20240116 11:54:13.104"/>
 </kw>
-<status status="PASS" starttime="20240110 16:54:12.451" endtime="20240110 16:54:15.525"/>
+<status status="FAIL" starttime="20240116 11:54:10.138" endtime="20240116 11:54:13.104"/>
 </kw>
-<kw name="Fill the username and password" library="testDemoPoPage">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${usernameLoc}</arg>
-<arg>${usernameVal}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:15.526" level="INFO">Typing text 'standard_user' into text field 'css:[name="user-name"]'.</msg>
-<status status="PASS" starttime="20240110 16:54:15.526" endtime="20240110 16:54:15.610"/>
+<kw name="Open the alert box and click Ok" library="alertPage">
+<status status="NOT RUN" starttime="20240116 11:54:13.105" endtime="20240116 11:54:13.105"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${passwordLoc}</arg>
-<arg>${passwordVal}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:15.610" level="INFO">Typing password into text field 'css:[name="password"]'.</msg>
-<msg timestamp="20240110 16:54:15.636" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20240110 16:54:15.677" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20240110 16:54:15.610" endtime="20240110 16:54:15.678"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${loginButton}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:15.678" level="INFO">Clicking button 'id:login-button'.</msg>
-<status status="PASS" starttime="20240110 16:54:15.678" endtime="20240110 16:54:19.626"/>
-</kw>
-<status status="PASS" starttime="20240110 16:54:15.526" endtime="20240110 16:54:19.626"/>
-</kw>
-<kw name="wait for login" library="testDemoPoPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${container}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240110 16:54:19.627" endtime="20240110 16:54:19.645"/>
-</kw>
-<status status="PASS" starttime="20240110 16:54:19.626" endtime="20240110 16:54:19.646"/>
-</kw>
-<kw name="verify login" library="testDemoPoPage">
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${result}</var>
-<arg>${AddToContainer}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:19.664" level="INFO">${result} = ADD TO CART</msg>
-<status status="PASS" starttime="20240110 16:54:19.646" endtime="20240110 16:54:19.664"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${result}</arg>
-<arg>ADD TO CART</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20240110 16:54:19.665" endtime="20240110 16:54:19.665"/>
-</kw>
-<status status="PASS" starttime="20240110 16:54:19.646" endtime="20240110 16:54:19.665"/>
-</kw>
-<kw name="Click the add to cart button" library="testDemoPoPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${addToCartButton}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:19.665" level="INFO">Clicking button 'xpath:(//button[@class="btn_primary btn_inventory"])[1]'.</msg>
-<status status="PASS" starttime="20240110 16:54:19.665" endtime="20240110 16:54:19.709"/>
-</kw>
-<status status="PASS" starttime="20240110 16:54:19.665" endtime="20240110 16:54:19.709"/>
-</kw>
-<kw name="Check the cart added or not and click the cart button" library="testDemoPoPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${containerVerify}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240110 16:54:19.709" endtime="20240110 16:54:19.729"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${containerVerify}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20240110 16:54:19.741" level="INFO">Element 'css:#shopping_cart_container &gt; a &gt; span' is displayed.</msg>
-<status status="PASS" starttime="20240110 16:54:19.729" endtime="20240110 16:54:19.741"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${container}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:19.742" level="INFO">Clicking element 'id:shopping_cart_container'.</msg>
-<status status="PASS" starttime="20240110 16:54:19.741" endtime="20240110 16:54:19.958"/>
-</kw>
-<status status="PASS" starttime="20240110 16:54:19.709" endtime="20240110 16:54:19.959"/>
-</kw>
-<kw name="Click the checkout button" library="testDemoPoPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${checkoutButton}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240110 16:54:19.959" endtime="20240110 16:54:19.978"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${checkoutButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:19.979" level="INFO">Clicking element 'css:[class="btn_action checkout_button"]'.</msg>
-<status status="PASS" starttime="20240110 16:54:19.978" endtime="20240110 16:54:20.234"/>
-</kw>
-<status status="PASS" starttime="20240110 16:54:19.959" endtime="20240110 16:54:20.234"/>
-</kw>
-<kw name="Fill the details" library="testDemoPoPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${firstName}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240110 16:54:20.235" endtime="20240110 16:54:20.256"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${firstName}</arg>
-<arg>Rev</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:20.256" level="INFO">Typing text 'Rev' into text field 'first-name'.</msg>
-<status status="PASS" starttime="20240110 16:54:20.256" endtime="20240110 16:54:20.314"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${lastName}</arg>
-<arg>Revanth</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:20.315" level="INFO">Typing text 'Revanth' into text field 'last-name'.</msg>
-<status status="PASS" starttime="20240110 16:54:20.315" endtime="20240110 16:54:20.376"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${zipCode}</arg>
-<arg>641402</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:20.376" level="INFO">Typing text '641402' into text field 'postal-code'.</msg>
-<status status="PASS" starttime="20240110 16:54:20.376" endtime="20240110 16:54:20.438"/>
-</kw>
-<status status="PASS" starttime="20240110 16:54:20.234" endtime="20240110 16:54:20.438"/>
-</kw>
-<kw name="Click the continue button and finish button" library="testDemoPoPage">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${continueButton}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:20.438" level="INFO">Clicking button 'css:[class="btn_primary cart_button"]'.</msg>
-<status status="PASS" starttime="20240110 16:54:20.438" endtime="20240110 16:54:20.675"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${finishButton}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240110 16:54:20.675" endtime="20240110 16:54:20.696"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${finishButton}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20240110 16:54:20.696" endtime="20240110 16:54:20.967"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${finishButton}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:20.969" level="INFO">Clicking element 'xpath://a[text()='FINISH']'.</msg>
-<status status="PASS" starttime="20240110 16:54:20.967" endtime="20240110 16:54:21.360"/>
-</kw>
-<status status="PASS" starttime="20240110 16:54:20.438" endtime="20240110 16:54:21.360"/>
-</kw>
-<kw name="Validate the purchase" library="testDemoPoPage">
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${text}</var>
-<arg>${finalText}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20240110 16:54:21.375" level="INFO">${text} = THANK YOU FOR YOUR ORDER</msg>
-<status status="PASS" starttime="20240110 16:54:21.360" endtime="20240110 16:54:21.375"/>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<arg>${text}</arg>
-<arg>THANK YOU FOR YOUR ORDER</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" starttime="20240110 16:54:21.375" endtime="20240110 16:54:21.376"/>
-</kw>
-<status status="PASS" starttime="20240110 16:54:21.360" endtime="20240110 16:54:21.376"/>
-</kw>
-<status status="PASS" starttime="20240110 16:54:12.450" endtime="20240110 16:54:21.376"/>
+<status status="FAIL" starttime="20240116 11:54:10.137" endtime="20240116 11:54:13.106">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=120.0.6099.217)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7D8032142+3514994]
+	(No symbol) [0x00007FF7D7C50CE2]
+	(No symbol) [0x00007FF7D7AF76AA]
+	(No symbol) [0x00007FF7D7AEFB39]
+	(No symbol) [0x00007FF7D7AE25DD]
+	(No symbol) [0x00007FF7D7AE16FD]
+	(No symbol) [0x00007FF7D7AE0746]
+	(No symbol) [0x00007FF7D7AE06EB]
+	(No symbol) [0x00007FF7D7ADEE3D]
+	(No symbol) [0x00007FF7D7ADF603]
+	(No symbol) [0x00007FF7D7AFA0FD]
+	(No symbol) [0x00007FF7D7B82E01]
+	(No symbol) [0x00007FF7D7B65FEA]
+	(No symbol) [0x00007FF7D7B828F6]
+	(No symbol) [0x00007FF7D7B65D93]
+	(No symbol) [0x00007FF7D7B34BDC]
+	(No symbol) [0x00007FF7D7B35C64]
+	GetHandleVerifier [0x00007FF7D805E16B+3695259]
+	GetHandleVerifier [0x00007FF7D80B6737+4057191]
+	GetHandleVerifier [0x00007FF7D80AE4E3+4023827]
+	GetHandleVerifier [0x00007FF7D7D804F9+689705]
+	(No symbol) [0x00007FF7D7C5C048]
+	(No symbol) [0x00007FF7D7C58044]
+	(No symbol) [0x00007FF7D7C581C9]
+	(No symbol) [0x00007FF7D7C488C4]
+	BaseThreadInitThunk [0x00007FFF5586257D+29]
+	RtlUserThreadStart [0x00007FFF5768AA58+40]
+</status>
 </test>
-<doc>To validate Login</doc>
-<status status="PASS" starttime="20240110 16:54:12.262" endtime="20240110 16:54:21.377"/>
-</suite>
-<status status="PASS" starttime="20240110 16:54:12.261" endtime="20240110 16:54:21.377"/>
-</suite>
-<status status="PASS" starttime="20240110 16:54:12.243" endtime="20240110 16:54:21.379"/>
+<doc>To Handle alert</doc>
+<status status="FAIL" starttime="20240116 11:54:09.874" endtime="20240116 11:54:13.108"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="pythonProject">pythonProject</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tests">pythonProject.Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="testDemoPO">pythonProject.Tests.testDemoPO</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Alert">Alert</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20240116 11:54:10.762" level="WARN">There was an error managing chrome (error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json): error trying to connect: dns error: No such host is known. (os error 11001)); using driver found in the cache</msg>
 </errors>
 </robot>

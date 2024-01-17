@@ -22,13 +22,14 @@ ${zipCode}               postal-code
 ${continueButton}         css:[class="btn_primary cart_button"]
 ${finishButton}           xpath://a[text()='FINISH']
 ${finalText}              css:[class="complete-header"]
+${browsername}            Chrome
 
 
 
 
 *** Keywords ***
 open the browser and with swaglabs url
-    Create Webdriver  Chrome     C:/Users/Lenovo/Downloads/chromedriver_win32
+    Create Webdriver  ${browsername}     tests/resource/${browsername}
     Go To    https://www.saucedemo.com/v1/
 
 
@@ -72,3 +73,6 @@ Click the continue button and finish button
 Validate the purchase
     ${text}=    Get Text    ${finalText}
     Should Be Equal As Strings    ${text}    THANK YOU FOR YOUR ORDER
+
+
+

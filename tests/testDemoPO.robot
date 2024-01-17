@@ -6,6 +6,7 @@ Resource         ../PO/testDemoPoPage.robot
 
 *** Test Cases ***
 validate successful login
+    [Tags]    LOGIN
     Fill the username and password
     wait for login
     verify login
